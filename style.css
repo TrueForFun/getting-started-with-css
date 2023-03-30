@@ -12,6 +12,7 @@
   --dkpink: #4b0d49;
   --accentColor: var(--aqua);
   --accentSecondColor: var(--magenta);
+  --improvisation: "Font Awesome 6 Free";
 }
 /* border box model: https://css-tricks.com/box-sizing/ */
 html {
@@ -105,11 +106,82 @@ section.contacts p {
 section.contacts h2 {
   font-family: ui-rounded;
 }
-
-footer {
-  height: 4rem;
-  background-color: var(--black);
+nav {
+  font-family: var(--mono);
+  font-size: 80%;
+}
+nav h2 {
+  font-family: var(--sans);
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: flex;
+  flex-flow: wrap;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
+}
+nav a {
+  text-decoration: none;
+  color: var(--white);
+  display: block;
+}
+nav li:first-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+nav a [class*="fa-"] {
+  font-size: 150%;
+  color: aqua;
+}
+footer a [class*="fa-"] {
+  font-size: 150%;
+}
+.button-resume {
+  background-color: #e310cb;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+.button-resume:hover {
+  color: var(--white);
+  background-color: #4b0d49;
+}
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}
+footer ul {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+}
+footer {
+  height: 16rem;
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer h3 {
+  flex-basis: 100%;
+  font-family: var(--improvisation);
+  font-size: 80%;
+  margin-top: 3rem;
+}
+footer p {
+  font-size: 70%;
 }
