@@ -43,7 +43,9 @@ a:hover {
   text-decoration: none;
 }
 #intro {
-  padding-bottom: 10rem;
+  padding: 4rem 1rem 10rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 #intro p {
   font-size: 1 rem;
@@ -106,6 +108,11 @@ section.contacts p {
 section.contacts h2 {
   font-family: ui-rounded;
 }
+
+.navigationBar_item-active {
+  text-decoration: underline;
+  color: var(--accentSecondColor);
+}
 nav {
   font-family: var(--mono);
   font-size: 80%;
@@ -115,8 +122,8 @@ nav h2 {
 }
 nav ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  padding: 1rem 1rem 2rem 4rem;
+  max-width: 1200px;
   display: flex;
   flex-flow: wrap;
   justify-content: center;
@@ -148,6 +155,7 @@ footer a [class*="fa-"] {
   color: var(--white);
   background-color: #4b0d49;
 }
+/* media lets you control the display splitting in a way of putting icons far and not too far from each other */
 @media (min-width: 850px) {
   nav {
     max-width: 1200px;
@@ -184,4 +192,98 @@ footer h3 {
 }
 footer p {
   font-size: 70%;
+}
+.gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(121, 9, 114, 1) 35%,
+    rgba(0, 212, 255, 1) 96%
+  );
+  height: 0.2rem;
+}
+.article {
+  padding: 1rem 1rem 2rem 4rem;
+}
+.dkblue {
+  background-color: var(--dkblue);
+}
+article p {
+  font-family: "Oxygen Mono";
+}
+article h4 {
+  color: aqua;
+}
+.blackbox {
+  background-color: var(--black);
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.picture {
+  margin: 2rem 0rem 4rem 0;
+  border-left: 1px solid aqua;
+  border-top: 1px solid aqua;
+  border-radius: 25px;
+  padding: 1rem;
+  grid-column: 1/6;
+  grid-row: 1/2;
+}
+.picture-mirror {
+  margin: 0rem 0rem 4rem 0;
+  border-right: 1px solid aqua;
+  border-bottom: 1px solid aqua;
+  border-radius: 25px;
+  padding: 1rem;
+  grid-column: 5/10;
+  grid-row: 1/2;
+}
+
+@media (min-width: 550px) {
+  .article {
+    max-width: 1200px;
+  }
+  .textonpicture {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+  }
+  .blackbox {
+    order: 2;
+    text-align: right;
+    grid-column: 5/10;
+    grid-row: 1/2;
+    height: fit-content;
+  }
+}
+img {
+  width: 100%;
+}
+
+@media (min-width: 550px) {
+  .textonpicture-mirror {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+  }
+  .blackbox-mirror {
+    order: 1;
+    text-align: left;
+    grid-column: 1/6;
+    grid-row: 1/2;
+    height: fit-content;
+  }
+}
+
+.textonpicture-mirror {
+}
+.blackbox-mirror {
+  background-color: var(--black);
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 4rem;
 }
